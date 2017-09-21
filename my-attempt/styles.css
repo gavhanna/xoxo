@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  font-family: Helvetica;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.board {
+  margin: 0 auto;
+  /* background: pink; */
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 33%;
+  width: 33%;
+  background: skyblue;
+  box-shadow: inset -1px 0px 0px 0px #333,
+                    0px 1px 0px 0px #333,
+                    -1px 0px 0px 0px #333,
+                    0px -1px 0px 0px #333;
+  text-align: center;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.square:hover {
+  background: #18A0D6;
+  transform: scale(1.05);
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  width: 260px;
+  margin-left: -130px;
+  text-align: center;
+  background: rgba(6, 72, 170, 0.7);
+  z-index: 100;
+}
+
+.modal h2, .modal button {
+  margin: 20px;
+  padding: 10px;
+}
