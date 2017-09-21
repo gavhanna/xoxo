@@ -117,6 +117,7 @@
     } else if (checkForWin(ai, newBoard)) {
       return {score: 10}
     } else if (empties.length === 0) {
+      return {score: 0}
     }
 
     let moves = [];
