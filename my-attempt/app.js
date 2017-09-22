@@ -8,9 +8,9 @@
   let currentBoard = [0, 1, 2, 
     3, 4, 5, 
     6, 7, 8];
-    // icons
-    let X = document.getElementById("X");
-    let O = document.getElementById("O");
+  // icons
+  let X = document.getElementById("X");
+  let O = document.getElementById("O");
     
   replayButton.addEventListener("click", restartGame, false);
   X.addEventListener("click", iconSelect, false);
