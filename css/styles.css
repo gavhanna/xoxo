@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background: #2e2f2e;
+}
+
 #wrapper {
   font-family: 'Fredericka the Great', cursive;
   height: 100vh;
