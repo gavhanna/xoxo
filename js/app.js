@@ -2,13 +2,15 @@
 (function(){
   let human = "X";
   let ai = "O";
+  let humanScore = 0;
+  let aiScore = 0;
   let modal = document.querySelector(".modal");
   let squares = document.querySelectorAll(".square");
   let replayButton = document.getElementById("replayButton");
   let currentBoard = [0, 1, 2, 
     3, 4, 5, 
     6, 7, 8];
-  // icons
+
   let X = document.getElementById("X");
   let O = document.getElementById("O");
     
@@ -37,15 +39,18 @@
     document.getElementById(id).removeEventListener("click", clickSquare, false);
     if (checkForWin(human, currentBoard)) {
       popupModal("You won!");
+      humanScore++;
+      updateScoreBoard("human", humanScore);
       removeEventListeners();
     } else if (checkForWin(ai, currentBoard)) {
       popupModal("You lost :(");
+      aiScore++;
+      updateScoreBoard("ai", aiScore);
       removeEventListeners();
     } else if (checkForDraw()) {
       popupModal("It's a draw!");
       removeEventListeners();
     }
-    
   }
 
   function takeTurn(square, player) {
@@ -176,6 +181,13 @@
       el.childNodes[0].innerText = "";
     })
     modal.style.display = "none";
-    document.getElementById("choose-icon").style.display = "block";
+    document.getElementById("choose-icon").style.display = "flex";
   }
+
+  function updateScoreBoard(player, score) {
+    const playerToUpdate = document.getElementById(player + "-score");
+    console.log(playerToUpdate);
+    playerToUpdate.innerText = score;
+  }
+
 })();

@@ -6,15 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>XOXO</title>
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div id="wrapper">
     <div id="choose-icon">
-      <span>Play as:</span>
-      <div class="choices">
-        <span id="X">X</span>
-        <span id="O">O</span>
+      <div class="icon-modal">
+        <div class="play-as">
+          <span>Choose your icon!</span>
+        </div>
+        <div class="choices">
+          <span>
+            <span id="X">X</span>
+          </span>
+          <span>
+            <span id="O">O</span>
+          </span>
+        </div>
       </div>
     </div>
     <div class="modal">
@@ -22,6 +30,16 @@
       <button id="replayButton">Play Again?</button>
     </div>
     <div class="board">
+      <div class="scores">
+        <div class="human-score">
+          <span>Human: </span>
+          <span class="score" id="human-score">0</span>
+        </div>
+        <div class="ai-score">
+          <span class="score" id="ai-score">0</span>
+          <span> :AI</span>
+        </div>
+      </div>
       <div class="square" id="0"><span></span></div>
       <div class="square" id="1"><span></span></div>
       <div class="square" id="2"><span></span></div>
